@@ -4,7 +4,7 @@ const pool = require("../config/db");
 const router = express.Router();
 
 // Public widget configuration
-router.get("/widgets/:id/config", async (req, res) => {
+router.get("/:id/config", async (req, res) => {
   try {
     const result = await pool.query(
       `SELECT id, type, title, description, form_fields,
